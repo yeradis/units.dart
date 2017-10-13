@@ -16,15 +16,17 @@ class Speed implements Comparable<Speed> {
    */
     final double _speed;
 
-    const Speed.fromMeterPerSecond({double value : 0.0}) : _speed = value;
+    const Speed.fromMeterPerSecond({double value : 0.0})   : _speed = value;
     const Speed.fromKilometerPerHour({double value : 0.0}) : _speed = _kmh_to_msec * value;
-    const Speed.fromMilePerHour({double value: 0.0}): _speed = _mih_to_msec * value;
-    const Speed.fromKnot({double value: 0.0}): _speed = _knot_to_msec * value;
+    const Speed.fromMilePerHour({double value: 0.0})       : _speed = _mih_to_msec * value;
+    const Speed.fromKnot({double value: 0.0})              : _speed = _knot_to_msec * value;
 
-    double get inMeterPerSecond => _speed > 0.0 ? _speed : 0.0;
-    double get inKilometerPerHour => _speed > 0.0 ? _msec_to_kmh * _speed : 0.0;
-    double get inMilePerHour => _speed > 0.0 ? _msec_to_mih * _speed : 0.0;
-    double get inKnot => _speed > 0.0 ? _msec_to_knot * _speed : 0.0;
+    double get inMeterPerSecond   => _returnValueOrZero(_speed);
+    double get inKilometerPerHour => _returnValueOrZero(_msec_to_kmh * _speed);
+    double get inMilePerHour      => _returnValueOrZero(_msec_to_mih * _speed);
+    double get inKnot             => _returnValueOrZero(_msec_to_knot * _speed);
+
+    double _returnValueOrZero(double value) => value >= 0.0 ? double.parse(value.toStringAsFixed(6)) : 0.0;
 
     /**
      * Compares this Speed to [other], returning zero if the values are equal.

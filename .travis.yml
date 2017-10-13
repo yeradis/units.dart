@@ -1,0 +1,21 @@
+language: dart
+dart:
+  - dev
+
+dart_task:
+  - dartanalyzer: --fatal-warnings lib
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install lcov
+
+script:
+  - pub run test -r expanded test/*.dart
+  - pub get --packages-dir
+  - pub global activate coverage
+  - pub global activate coveralls
+  - pub run dart_codecov_generator --report-on=lib/ --verbose
+
+after_success:
+  - pub global run coveralls coverage.lcov
+  - bash <(curl -s https://codecov.io/bash)

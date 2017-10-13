@@ -26,7 +26,7 @@ void main() {
         });
 
         test('Having 1.0 should return 0.27', () {
-            expect(new Speed.fromKilometerPerHour(value: 1.0).inMeterPerSecond, 0.27777777777778);
+            expect(new Speed.fromKilometerPerHour(value: 1.0).inMeterPerSecond, 0.277778);
         });
 
         test('Having 360 should return 100', () {

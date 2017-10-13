@@ -1,8 +1,41 @@
+import 'dart:math';
+
 import 'package:units/units.dart';
 import 'package:test/test.dart';
 
 void main() {
-    group('Length tests', () {
+    group('Length conversion tests', () {
+        test('Having -1.0 should return 0.0', () {
+            expect(new Length.fromMeters(value: -1.0).inMeters, equals(0.0));
+            expect(new Length.fromKilometers(value: -1.0).inKilometers, equals(0.0));
+            expect(new Length.fromMiles(value: -1.0).inMiles, equals(0.0));
+        });
+
+        test('Having 1m return should match', () {
+            expect(new Length.fromMeters(value: 1.0).inMeters, equals(1.0));
+            expect(new Length.fromMeters(value: 1.0).inKilometers, equals(0.001));
+            expect(new Length.fromMeters(value: 1.0).inMiles, equals(0.000621));
+        });
+
+        test('Having 1km return should match', () {
+            expect(new Length.fromKilometers(value: 1.0).inKilometers, equals(1.0));
+            expect(new Length.fromKilometers(value: 1.0).inMeters, equals(1000.0));
+            expect(new Length.fromKilometers(value: 1.0).inMiles, equals(0.621371));
+        });
+
+        test('Having 1mi return should match', () {
+            expect(new Length.fromMiles(value: 1.0).inMiles, equals(1.0));
+            expect(new Length.fromMiles(value: 1.0).inMeters, equals(1609.344));
+            expect(new Length.fromMiles(value: 1.0).inKilometers, equals(1.609344));
+        });
+
+        test('Having 1mi return should match', () {
+           print(12345678910.toStringAsFixed(6));
+           print(12345678910.12345678.toStringAsFixed(6));
+        });
+    });
+
+    group('Length comparisson tests', () {
         Length distance20;
         Length distance4;
 
