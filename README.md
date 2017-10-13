@@ -6,7 +6,9 @@ Included right now:
 
 - Speed
 - Length
-
+- Angle
+  Supports negative angles, not restricted to 360 degrees or 2PI radians
+  
 ## Usage
 
 A simple usage example:

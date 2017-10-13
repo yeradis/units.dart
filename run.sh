@@ -19,6 +19,8 @@ if [[ $# -eq 0 ]] ; then
     usage;
 fi
 
+echo "If packages missing, check the .travil.yaml, there appears the activation commands"
+
 for var in "$@"
 do
     case "${var}"

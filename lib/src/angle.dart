@@ -15,8 +15,10 @@ class Angle implements Comparable<Angle> {
     Angle.fromDegrees({double value : 0.0}): _angle = value;
     Angle.fromRadians({double value: 0.0}): _angle = value * rad_to_degree;
 
-    double get inDegrees => _angle;
-    double get inRadians => _angle * degree_to_rad;
+    double get inDegrees => _returnValue(_angle);
+    double get inRadians => _returnValue(_angle * degree_to_rad);
+
+    double _returnValue(num value) => double.parse(value.toStringAsFixed(6));
 
     /**
      * Compares this Angle to [other], returning zero if the values are equal.

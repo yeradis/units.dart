@@ -19,3 +19,8 @@ For example: 12345678910.12345678 will turn into: 12345678910.123457
 ## 0.0.3
 
 Minor update, add new tests
+
+## 0.0.4
+
+Added Angle unit
+  Supports negative angles, not restricted to 360 degrees or 2PI radians
