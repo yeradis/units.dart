@@ -1,9 +1,4 @@
-import 'dart:math';
-
 class Length implements Comparable<Length> {
-    /// 1 meter
-    static const double _one_meter = 0.999999690624;
-
     ///meters to kilometers: meters * 10^-3
     static const double _m_to_km = 0.001;
     /// meters to miles: meters * 6.21371192 * 10^-4
