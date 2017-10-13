@@ -28,11 +28,6 @@ void main() {
             expect(new Length.fromMiles(value: 1.0).inMeters, equals(1609.344));
             expect(new Length.fromMiles(value: 1.0).inKilometers, equals(1.609344));
         });
-
-        test('Having 1mi return should match', () {
-           print(12345678910.toStringAsFixed(6));
-           print(12345678910.12345678.toStringAsFixed(6));
-        });
     });
 
     group('Length comparisson tests', () {
