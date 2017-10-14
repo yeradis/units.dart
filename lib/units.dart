@@ -7,3 +7,4 @@ library units;
 export 'src/speed.dart';
 export 'src/length.dart';
 export 'src/angle.dart';
+export 'src/temperature.dart';

@@ -6,8 +6,8 @@
 
 Included right now:
 
-- Speed
-- Length
+- `Speed`
+- `Length`
 
 ## 0.0.2
 
@@ -22,5 +22,9 @@ Minor update, add new tests
 
 ## 0.0.4
 
-Added Angle unit
+Added `Angle` unit
   Supports negative angles, not restricted to 360 degrees or 2PI radians
+
+## 0.0.5
+Added `Temperature` unit ... works with:
+  Celsius, Fahrenheit, Kelvin, Rankine and Romer

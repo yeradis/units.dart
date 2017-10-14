@@ -1,6 +1,6 @@
 name: units
 description: A starting point for measurement units in Dart.
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/yeradis/units.dart
 author: Yeradis P. Barbosa Marrero <yeradis@gmail.com>
 

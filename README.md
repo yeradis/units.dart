@@ -4,10 +4,12 @@ A starting point for measurement units in Dart.
 
 Included right now:
 
-- Speed
-- Length
-- Angle
+- `Speed`
+- `Length`
+- `Angle`
   Supports negative angles, not restricted to 360 degrees or 2PI radians
+- `Temperature` ... works with:
+  Celsius, Fahrenheit, Kelvin, Rankine and Romer
   
 ## Usage
 
