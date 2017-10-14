@@ -13,9 +13,10 @@ script:
   - pub run test -r expanded test/*.dart
   - pub get
   - pub global activate coverage
+  - pub global activate coveralls
   - dart --pause-isolates-on-exit --enable-vm-service=8111 test/test_all.dart &
   - sleep 1
-  - pub global run coverage:collect_coverage --uri=http://127.0.0.1:8111/ -o coverage.json --resume-isolates
+  - pub global run coverage:collect_coverage --port=8111/ -o coverage.json --resume-isolates
   - pub global run coverage:format_coverage --packages=.packages -i coverage.json -o coverage.lcov --lcov --report-on=lib/
 
 after_success:
