@@ -28,3 +28,6 @@ Added `Angle` unit
 ## 0.0.5
 Added `Temperature` unit ... works with:
   Celsius, Fahrenheit, Kelvin, Rankine and Romer
+  
+## 0.0.6
+Add `Gradian` to `Angle`

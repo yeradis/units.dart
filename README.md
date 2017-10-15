@@ -5,11 +5,26 @@ A starting point for measurement units in Dart.
 Included right now:
 
 - `Speed`
+  * Meter per second `m/s`
+  * Kilometer per hour `km/h`
+  * Mile per hour `mi/h`
+  * Knot `kn`
 - `Length`
+  * Meter `m`
+  * Kilometer `km`
+  * Mile `mi`
 - `Angle`
-  Supports negative angles, not restricted to 360 degrees or 2PI radians
-- `Temperature` ... works with:
-  Celsius, Fahrenheit, Kelvin, Rankine and Romer
+  * Degree `°`
+  * Radian `rad`
+  * Gradian `grad`
+  > Supports negative angles, not restricted to 360 degrees or 2PI radians
+      
+- `Temperature`
+  * Celsius `°C`
+  * Fahrenheit `°F`
+  * Kelvin  `K`
+  * Rankine `°R`
+  * Romer `°Rø`
   
 ## Usage
 

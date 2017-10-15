@@ -7,16 +7,22 @@ class Angle implements Comparable<Angle> {
     final double _angle;
 
     ///degrees to radians
-    static const double degree_to_rad = PI / 180.0;
+    static const double _degree_to_rad = PI / 180.0;
 
     ///radians to degrees
-    static const double rad_to_degree = 180.0 / PI;
+    static const double _rad_to_degree = 180.0 / PI;
+
+    ///gradians to degrees
+    static const double _grad_to_degree = 0.9;
+    static const double _degree_to_grad = 1.11111111;
 
     Angle.fromDegrees({double value : 0.0}): _angle = value;
-    Angle.fromRadians({double value: 0.0}): _angle = value * rad_to_degree;
+    Angle.fromRadians({double value: 0.0}): _angle = value * _rad_to_degree;
+    Angle.fromGradian({double value: 0.0}): _angle = _grad_to_degree * value;
 
     double get inDegrees => _returnValue(_angle);
-    double get inRadians => _returnValue(_angle * degree_to_rad);
+    double get inRadians => _returnValue(_angle * _degree_to_rad);
+    double get inGradians => _returnValue(_degree_to_grad * _angle);
 
     double _returnValue(num value) => double.parse(value.toStringAsFixed(6));
 
