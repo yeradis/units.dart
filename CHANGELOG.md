@@ -31,3 +31,6 @@ Added `Temperature` unit ... works with:
   
 ## 0.0.6
 Add `Gradian` to `Angle`
+
+## 0.0.7
+Minor update to remove the upper bound sdk limit constraint
