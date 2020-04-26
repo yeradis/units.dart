@@ -1,4 +1,4 @@
-import 'dart:math';
+import 'dart:math' show pi;
 
 class Angle implements Comparable<Angle> {
     /*
@@ -7,10 +7,10 @@ class Angle implements Comparable<Angle> {
     final double _angle;
 
     ///degrees to radians
-    static const double _degree_to_rad = PI / 180.0;
+    static const double _degree_to_rad = pi / 180.0;
 
     ///radians to degrees
-    static const double _rad_to_degree = 180.0 / PI;
+    static const double _rad_to_degree = 180.0 / pi;
 
     ///gradians to degrees
     static const double _grad_to_degree = 0.9;
